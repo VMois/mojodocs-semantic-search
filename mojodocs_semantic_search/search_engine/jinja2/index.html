@@ -1,13 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Search Mojo Docs</title>
     <meta charset="UTF-8">
-    <title>Mojo Docs Semantic Search</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <h1>Welcome</h1>
-    <form action="/search" method="post">
-        <input type="text" name="query" placeholder="Search...">
-        <input type="submit" value="Search">
-    </form>
+<body class="bg-gray-100 p-8">
+    <div class="max-w-2xl mx-auto bg-white p-8 rounded-md shadow-md">
+        <!-- Title -->
+        <h1 class="text-3xl font-semibold mb-6 text-center text-gradient-to-r from-red-500 via-red-600 to-red-700">Search <span class="text-red-500">Mojo 🔥</span> Docs</h1>
+
+        <!-- Search Form -->
+        <form class="mb-6">
+            <div class="flex items-center border border-gray-300 rounded-md p-2">
+                <input type="text" class="flex-1 outline-none" placeholder="Enter query...">
+                <button type="submit" class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md ml-2">Search</button>
+            </div>
+        </form>
+
+        <!-- Results -->
+        <div class="space-y-4">
+            <!-- TODO: replace fake result -->
+            <div class="flex">
+                <div class="flex-1">
+                    <p class="text-sg">Results of query here</p>
+                </div>
+                <div>
+                    <a href="#" class="text-blue-500">Link to source</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
