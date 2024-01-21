@@ -57,6 +57,8 @@ TEMPLATES = [
     },
 ]
 
+FORM_RENDERER = 'django.forms.renderers.Jinja2'
+
 WSGI_APPLICATION = 'mojodocs_semantic_search.wsgi.application'
 
 

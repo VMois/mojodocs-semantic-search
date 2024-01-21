@@ -1,0 +1,9 @@
+<div class="flex flex-row w-full">
+    <input type="text"
+        name="{{ form.content.name }}"
+        id="{{ form.content.id_for_label }}"
+        class="mt-1 p-2 w-full border rounded-md"
+        placeholder="{{ form.content.label }}"
+        {% if form.content.required %}required{% endif %}>
+    <button type="submit" class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md ml-2">Search</button>
+</div>
