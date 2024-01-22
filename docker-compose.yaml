@@ -1,12 +1,15 @@
 services:
   mojodocs-app:
     build: mojodocs_semantic_search
+    command: "gunicorn mojodocs_semantic_search.wsgi:application --bind 0.0.0.0:8000 -w 2"
+    env_file:
+      - .env
     environment:
       - DJANGO_SETTINGS_MODULE=mojodocs_semantic_search.settings_prod
     ports:
       - "8000:8000"
     restart: always
-    mem_limit: "500m"
+    mem_limit: "400m"
     cpus: 0.4
     depends_on:
      - chromadb
@@ -14,11 +17,11 @@ services:
   chromadb:
     image: chromadb/chroma:0.4.22
     volumes:
-      - ./chroma_db_only_manual:/chromadb/chromadb
-    command: uvicorn chromadb.app:app --reload --workers 1 --host 0.0.0.0 --port 8000 --log-config chromadb/log_config.yml --timeout-keep-alive 30
+      - ${CHROMADB_DIR:-./chroma_db_only_manual}:/chroma/chroma
+    command: uvicorn chromadb.app:app --reload --workers 2 --host 0.0.0.0 --port 8000 --log-config chromadb/log_config.yml --timeout-keep-alive 30
     environment:
       - IS_PERSISTENT=TRUE
-      - PERSIST_DIRECTORY=${PERSIST_DIRECTORY:-/chroma/chroma}
-    cpus: 0.3
-    mem_limit: "300m"
+      - PERSIST_DIRECTORY=/chroma/chroma
+    cpus: 0.4
+    mem_limit: "400m"
     restart: always
