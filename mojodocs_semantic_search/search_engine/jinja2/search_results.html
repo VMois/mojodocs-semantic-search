@@ -1,10 +1,10 @@
 {% for result in results %}
-    <div class="flex">
-        <div class="flex-1">
-            <p class="text-sg">{{ result['matched_content'] }}</p>
+    <div class="mx-auto bg-white p-6 rounded-md shadow-md mb-4">
+        <div class="w-3/4 pr-4">
+            <p class="text-gray-600 whitespace-normal overflow-auto">{{ result['matched_content'] | e }}</p>
         </div>
         <div>
-            <a href="{{ result['origin_url'] }}" class="text-blue-500" target="_blank">Link to source</a>
+            <a href="{{ result['origin_url'] }}" class="text-blue-500 hover:underline" target="_blank">Link to source</a>
         </div>
     </div>
 {% endfor %}
