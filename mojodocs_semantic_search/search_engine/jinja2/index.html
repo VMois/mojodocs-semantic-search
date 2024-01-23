@@ -33,7 +33,7 @@
         <h1 class="text-3xl font-semibold mb-6 text-center text-gradient-to-r from-red-500 via-red-600 to-red-700">Search <span class="text-red-500">Mojo 🔥</span> Docs</h1>
 
         <!-- Search Form -->
-        <form class="mb-6" hx-post="/search" hx-swap="innerHTML" hx-target="#search-results" hx-target-400="#search-results" hx-indicator="#results-loader-spinner">
+        <form class="mb-6" hx-post="/search" hx-swap="innerHTML" hx-target="#search-results" hx-target-400="#search-results" hx-target-5*="#search-results" hx-indicator="#results-loader-spinner">
             {{ csrf_input }}
             <div class="items-center border border-gray-300 rounded-md p-2">
                 {{ form }}
