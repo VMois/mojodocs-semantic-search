@@ -11,7 +11,9 @@ from django.views.decorators.http import require_http_methods
 from .forms import QueryForm
 
 
+log_format = '%(levelname)s - %(asctime)s - %(filename)s - %(message)s'
 logger = logging.getLogger(__name__)
+logging.basicConfig(level=logging.INFO, format=log_format)
 
 
 def index(request):
