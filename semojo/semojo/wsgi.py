@@ -1,5 +1,5 @@
 """
-WSGI config for mojodocs_semantic_search project.
+WSGI config for semojo project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mojodocs_semantic_search.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'semojo.settings')
 
 application = get_wsgi_application()

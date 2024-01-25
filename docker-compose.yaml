@@ -1,11 +1,11 @@
 services:
   mojodocs-app:
-    build: mojodocs_semantic_search
-    command: "gunicorn mojodocs_semantic_search.wsgi:application --bind 0.0.0.0:8000 -w 2"
+    build: semojo
+    command: "gunicorn semojo.wsgi:application --bind 0.0.0.0:8000 -w 2"
     env_file:
       - .env
     environment:
-      - DJANGO_SETTINGS_MODULE=mojodocs_semantic_search.settings_prod
+      - DJANGO_SETTINGS_MODULE=semojo.settings_prod
     ports:
       - "8000:8000"
     restart: always

@@ -1,5 +1,5 @@
 """
-ASGI config for mojodocs_semantic_search project.
+ASGI config for semojo project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mojodocs_semantic_search.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'semojo.settings')
 
 application = get_asgi_application()
