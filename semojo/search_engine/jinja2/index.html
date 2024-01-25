@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Search Mojo Docs</title>
+    <title>SeMojo - semantic search for Mojo language materials</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -30,7 +30,7 @@
 <body class="bg-gray-100 p-8">
     <div class="max-w-3xl mx-auto bg-white p-8 rounded-md shadow-md" hx-ext="response-targets">
         <!-- Title -->
-        <h1 class="text-3xl font-semibold mb-6 text-center text-gradient-to-r from-red-500 via-red-600 to-red-700">Search <span class="text-red-500">Mojo 🔥</span> Docs</h1>
+        <h1 class="text-3xl font-semibold mb-6 text-center text-gradient-to-r from-red-500 via-red-600 to-red-700">Semantic search for <span class="text-red-500">Mojo 🔥</span> language materials</h1>
 
         <!-- Search Form -->
         <form class="mb-6" hx-post="/search" hx-swap="innerHTML" hx-target="#search-results" hx-target-400="#search-results" hx-target-5*="#search-results" hx-indicator="#results-loader-spinner">
@@ -53,7 +53,7 @@
 
         <!-- Results -->
         <div id="search-results" class="space-y-4">
-            Search stuff!
+            No results yet. Enter a query and hit "Search" button.
         </div>
     </div>
 </body>
