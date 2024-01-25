@@ -22,6 +22,6 @@ services:
     environment:
       - IS_PERSISTENT=TRUE
       - PERSIST_DIRECTORY=/chroma/chroma
-    cpus: 0.4
+    cpus: 0.5
     mem_limit: "400m"
     restart: always
